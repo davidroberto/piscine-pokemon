@@ -1,3 +1,4 @@
+import Description from "./Description";
 import DisplayAllPokemons from "./DisplayAllPokemons";
 import FirePokemons from "./FirePokemons";
 import Footer from "./Footer";
@@ -82,6 +83,7 @@ function App() {
   return (
     <>
       <Header />
+      <Description />
       <LastCapturedPokemons pokemons={pokemonsFromDB} />
       <RandomPokemon pokemons={pokemonsFromDB} />
       <FirePokemons pokemons={pokemonsFromDB} />
