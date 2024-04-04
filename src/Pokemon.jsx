@@ -1,8 +1,10 @@
-const Pokemon = ({ pokemon }) => {
+const Pokemon = ({ pokemon, displayImage }) => {
   return (
     <article>
       <h3>{pokemon.name}</h3>
-      <img src={pokemon.image} alt={pokemon.name} />
+
+      {displayImage && <img src={pokemon.image} alt={pokemon.name} />}
+
       <p>Type : {pokemon.type}</p>
     </article>
   );

@@ -12,7 +12,7 @@ const LastCapturedPokemons = ({ pokemons }) => {
       <h2>Les derniers pokemons capturés : </h2>
 
       {lastThreeCapturedPokemons.map((pokemon) => {
-        return <Pokemon pokemon={pokemon} />;
+        return <Pokemon pokemon={pokemon} displayImage={true} />;
       })}
     </section>
   );

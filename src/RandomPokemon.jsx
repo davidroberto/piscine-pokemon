@@ -8,7 +8,7 @@ const RandomPokemon = ({ pokemons }) => {
   return (
     <section>
       <h2>Le pokemon du jour : </h2>
-      <Pokemon pokemon={randomPokemon} />
+      <Pokemon pokemon={randomPokemon} displayImage={true} />
     </section>
   );
 };
