@@ -1,32 +1,32 @@
 import { useState } from "react";
 
 const Pokedex = () => {
-  const [capturedPokemons, setCapturedPokemons] = useState([]);
+  const [pokemonsInPokedex, setPokemonsInPokedex] = useState([]);
 
-  const submitPokemon = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+    const pokemon = event.target.newPokemon.value;
 
-    const pokemon = event.target.addPokemon.value;
+    const newPokedex = [...pokemonsInPokedex, pokemon];
 
-    const newPokemons = [...capturedPokemons, pokemon];
-
-    setCapturedPokemons(newPokemons);
+    setPokemonsInPokedex(newPokedex);
   };
 
   return (
     <section>
-      <h3>Liste des pokemons attrapés : </h3>
+      <h2>Les pokemons de mon pokedex :</h2>
+
       <ul>
-        {capturedPokemons.map((pokemon) => {
+        {pokemonsInPokedex.map((pokemon) => {
           return <li>{pokemon}</li>;
         })}
       </ul>
 
-      <form onSubmit={submitPokemon}>
+      <form onSubmit={handleSubmit}>
         <label>
-          <input type="text" name="addPokemon" />
+          Ajouter un numéro 10 dans ma team
+          <input type="text" name="newPokemon" />
         </label>
-
         <input type="submit" />
       </form>
     </section>

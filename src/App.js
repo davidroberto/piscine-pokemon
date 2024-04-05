@@ -6,6 +6,7 @@ import LastCapturedPokemons from "./LastCapturedPokemons";
 import RandomPokemon from "./RandomPokemon";
 import PokemonTeamSelector from "./PokemonTeamSelector";
 import Pokedex from "./Pokedex";
+import PokemonsFromApi from "./PokemonsFromApi";
 
 function App() {
   const pokemonsFromDB = [
@@ -84,12 +85,13 @@ function App() {
   return (
     <>
       <Header />
-      <Pokedex />
+      <PokemonsFromApi />
+      {/* <Pokedex />
       <LastCapturedPokemons pokemons={pokemonsFromDB} />
       <RandomPokemon pokemons={pokemonsFromDB} />
       <FirePokemons pokemons={pokemonsFromDB} />
       <PokemonsTeam pokemons={pokemonsFromDB} />
-      <PokemonTeamSelector pokemons={pokemonsFromDB} />
+      <PokemonTeamSelector pokemons={pokemonsFromDB} /> */}
       <Footer />
     </>
   );
