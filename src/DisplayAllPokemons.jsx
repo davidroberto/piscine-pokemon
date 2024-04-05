@@ -1,9 +1,9 @@
 import Pokemon from "./Pokemon";
 
-const DisplayAllPokemons = ({ pokemons }) => {
+const PokemonsTeam = ({ pokemons }) => {
   return (
     <section>
-      <h2>Tous les pokémons</h2>
+      <h2>Les pokemons de votre team :</h2>
       {pokemons.map((pokemon) => {
         return <Pokemon pokemon={pokemon} displayImage={false} />;
       })}
@@ -11,4 +11,4 @@ const DisplayAllPokemons = ({ pokemons }) => {
   );
 };
 
-export default DisplayAllPokemons;
+export default PokemonsTeam;

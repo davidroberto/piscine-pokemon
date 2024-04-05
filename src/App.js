@@ -1,12 +1,10 @@
-import Contact from "./Contact";
-import Counter from "./Counter";
-import Description from "./Description";
-import DisplayAllPokemons from "./DisplayAllPokemons";
+import PokemonsTeam from "./DisplayAllPokemons";
 import FirePokemons from "./FirePokemons";
 import Footer from "./Footer";
 import Header from "./Header";
 import LastCapturedPokemons from "./LastCapturedPokemons";
 import RandomPokemon from "./RandomPokemon";
+import PokemonTeamSelector from "./PokemonTeamSelector";
 
 function App() {
   const pokemonsFromDB = [
@@ -88,8 +86,8 @@ function App() {
       <LastCapturedPokemons pokemons={pokemonsFromDB} />
       <RandomPokemon pokemons={pokemonsFromDB} />
       <FirePokemons pokemons={pokemonsFromDB} />
-      <DisplayAllPokemons pokemons={pokemonsFromDB} />
-      <Contact />
+      <PokemonsTeam pokemons={pokemonsFromDB} />
+      <PokemonTeamSelector pokemons={pokemonsFromDB} />
       <Footer />
     </>
   );
