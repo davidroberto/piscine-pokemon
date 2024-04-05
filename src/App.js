@@ -5,6 +5,7 @@ import Header from "./Header";
 import LastCapturedPokemons from "./LastCapturedPokemons";
 import RandomPokemon from "./RandomPokemon";
 import PokemonTeamSelector from "./PokemonTeamSelector";
+import Pokedex from "./Pokedex";
 
 function App() {
   const pokemonsFromDB = [
@@ -83,6 +84,7 @@ function App() {
   return (
     <>
       <Header />
+      <Pokedex />
       <LastCapturedPokemons pokemons={pokemonsFromDB} />
       <RandomPokemon pokemons={pokemonsFromDB} />
       <FirePokemons pokemons={pokemonsFromDB} />
